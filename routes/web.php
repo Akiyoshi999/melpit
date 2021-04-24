@@ -28,3 +28,9 @@ Route::prefix('mypage')
         Route::get('edit-profile', 'ProfileController@showProfileEditForm')->name('mypage.edit-profile');
         Route::post('edit-profile', 'ProfileController@editProfile')->name('mypage.edit-profile');
     });
+
+Route::middleware('auth')
+    ->group(function () {
+        Route::get('sell', 'SellController@showSellForm')->name('sell');
+        Route::post('sell', 'SellController@itemsell')->name('sell');
+    });
