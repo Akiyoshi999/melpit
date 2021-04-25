@@ -17,6 +17,8 @@ class CreateAppTables extends Migration
             $table->id();
 
             // ここにカラムを追加していく
+            $table->string('name');
+            $table->integer('sort_no');
 
             $table->timestamps();
         });
@@ -26,6 +28,8 @@ class CreateAppTables extends Migration
             $table->unsignedBigInteger('primary_category_id');
 
             // ここにカラムを追加していく
+            $table->string('name');
+            $table->integer('sort_no');
 
             $table->timestamps();
 
