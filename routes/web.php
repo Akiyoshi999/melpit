@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('top');
+Route::get('/', 'ItemsController@showTopForm')->name('top');
 
 Auth::routes();
 

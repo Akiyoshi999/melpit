@@ -25,4 +25,10 @@ class Item extends Model
     {
         return $this->state === self::STATE_SELLING;
     }
+
+    // 購入済みかどうかを返すアクセサ
+    public function getIsStateBoughtAttribute()
+    {
+        return $this->state === self::STATE_BOUGHT;
+    }
 }
