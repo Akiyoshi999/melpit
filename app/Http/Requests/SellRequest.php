@@ -24,6 +24,7 @@ class SellRequest extends FormRequest
     public function rules()
     {
         return [
+            'iamge_file_name' => ['reqired', 'file', 'image'],
             'name'        => ['required', 'string', 'max:255'],
             'description' => ['required', 'string', 'max:2000'],
             'category'    => ['required', 'integer'],
@@ -40,6 +41,7 @@ class SellRequest extends FormRequest
     public function attributes()
     {
         return [
+            'iamge_file_name' => '商品画像',
             'name' => '商品名',
             'description' => '商品の説明',
             'category' => 'カテゴリ',
