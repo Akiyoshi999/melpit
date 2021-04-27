@@ -62,6 +62,9 @@
                         <a class="dropdown-item" href="{{ route('sell') }}">
                             <i class="fas fa-camera text-left" style="width: 30px"></i>商品を出品する
                         </a>
+                        <a class="dropdown-item" href="{{ route('mypage.bought-items') }}">
+                            <i class="fas fa-shopping-bag text-left" style="width: 30px"></i>購入した商品
+                        </a>
                         <a class="dropdown-item" href="{{ route('mypage.sold-items') }}">
                             <i class="fas fa-store-alt text-lef" style="width: 30px"></i>出品した商品
                         </a>
