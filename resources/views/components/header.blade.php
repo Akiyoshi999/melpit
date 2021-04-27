@@ -14,7 +14,8 @@
                                 @foreach ($categories as $category)
                                 <option value="primary:{{$category->id}}" class="font-weight-bold"
                                     {{ $defaults['category'] == "primary:" . $category->id ? 'selected' : ''}}>
-                                    {{$category->name}}</option>
+                                    {{$category->name}}
+                                </option>
                                 @foreach ($category->secondaryCategories as $secondary)
                                 <option value="secondary:{{$secondary->id}}">　{{$secondary->name}}</option>
                                 <option value="secondary:{{$secondary->id}}"
@@ -24,8 +25,6 @@
                                 @endforeach
                             </select>
                         </div>
-                        <input type="text" name="keyword" class="form-control"
-                            aria-label="Text input with dropdown button" placeholder="キーワード検索">
                         <input type="text" name="keyword" class="form-control" value="{{$defaults['keyword']}}"
                             aria-label="Text input with dropdown button" placeholder="キーワード検索">
                         <div class="input-group-append">

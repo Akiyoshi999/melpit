@@ -42,6 +42,17 @@ class ItemsController extends Controller
             ->with('items', $items);
     }
 
+    // 商品購入画面表示
+    public function showBuyItemForm(Item $item)
+    {
+        if (!$item->isStateSelling) {
+            abort(404);
+        }
+
+        return view('items.item_buy_form')
+            ->with('item', $item);
+    }
+
     public function escape(string $value)
     {
         return str_replace(
